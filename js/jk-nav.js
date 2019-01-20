@@ -9,4 +9,4 @@ jQuery(document).ready(function($) {
       $('.jk-nav-cont').removeClass('showNav');
     });
   });
-}
+});

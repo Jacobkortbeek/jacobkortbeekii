@@ -131,4 +131,4 @@ jQuery(document).ready(function($) {
     });
   });
 
-}
+});
