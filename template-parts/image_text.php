@@ -2,22 +2,21 @@
   <div class="row img-text">
     <div class="col-lg-6 margin-bot">
       <div class="hvr-img fullCenter">
-        <img class="round shadow" src="./assets/img/lukasz-szmigiel-33891-unsplash.jpg" alt="">
+        <img class="round shadow" src="<?php the_sub_field('headshot_image'); ?>" alt="">
         <i class="far fa-hand-pointer tapBlog dNonePc"></i>
         <ul class="circle-container">
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fab fa-github"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fab fa-codepen"></i></a></li>
-          <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+          <?php if( have_rows('social_media') ):
+                  while ( have_rows('social_media') ) : the_rows();
+             ?>
+             <li><a href="<?php the_sub_field('fa_link'); ?>"><i class="<?php the_sub_field('fa_icon'); ?>"></i></a></li>
+           <?php endwhile; endif; ?>
         </ul>
       </div>
     </div>
     <div class="col-lg-6">
-      <h1>Header</h1>
+      <h1><?php the_sub_field('text_header'); ?></h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <?php the_sub_field('text_content'); ?>
       </p>
       <br />
       <button type="button" class="btn btn-primary float-right">Read More About Me</button>
