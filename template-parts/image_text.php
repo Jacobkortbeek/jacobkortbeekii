@@ -6,7 +6,7 @@
         <i class="far fa-hand-pointer tapBlog dNonePc"></i>
         <ul class="circle-container">
           <?php if( have_rows('social_media') ):
-                  while ( have_rows('social_media') ) : the_rows();
+                  while( have_rows('social_media') ) : the_row();
              ?>
              <li><a href="<?php the_sub_field('fa_link'); ?>"><i class="<?php the_sub_field('fa_icon'); ?>"></i></a></li>
            <?php endwhile; endif; ?>
