@@ -1,7 +1,7 @@
 <?php
   if( have_rows('page_builder') ):
 
-    while( hvae_rows('page_builder') ) : the_row();
+    while( have_rows('page_builder') ) : the_row();
 
       if( get_row_layout() == 'hero' ):
 
