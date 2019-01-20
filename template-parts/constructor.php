@@ -7,8 +7,8 @@
 
          get_template_part( 'template-parts/hero', 'none' );
 
-      elseif( get_row_layout() == 'nextpart' ):
-        this is the next part
+      // elseif( get_row_layout() == 'nextpart' ):
+      //   this is the next part
 
       endif;
 
@@ -17,7 +17,7 @@
     else : ?>
 
     <p>there are no parts</p>
-    
+
   <?php
   endif;
 ?>
