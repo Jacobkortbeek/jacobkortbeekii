@@ -7,8 +7,9 @@
 
          get_template_part( 'template-parts/hero', 'none' );
 
-      // elseif( get_row_layout() == 'nextpart' ):
-      //   this is the next part
+      elseif( get_row_layout() == 'image_and_text' ):
+
+        get_template_part( 'template-parts/image_text', 'none' );
 
       endif;
 
