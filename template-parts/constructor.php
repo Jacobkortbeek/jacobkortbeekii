@@ -11,6 +11,10 @@
 
         get_template_part( 'template-parts/image_text', 'none' );
 
+      elseif( get_row_layout() == 'project_skills' ):
+
+        get_template_part( 'template-parts/project_skills', 'none' );
+
       endif;
 
     endwhile;
