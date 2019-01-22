@@ -19,7 +19,7 @@
         <?php the_sub_field('text_content'); ?>
       </p>
       <br />
-      <button type="button" class="btn btn-primary float-right">Read More About Me</button>
+      <a href="<?php the_sub_field('button_link') ?>"><button type="button" class="btn btn-primary float-right"><?php the_sub_field('button_text') ?></button></a>
     </div>
   </div>
 </div>
