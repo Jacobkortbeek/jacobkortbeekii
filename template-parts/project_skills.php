@@ -18,8 +18,8 @@
     <div class="col-lg-6">
       <h2 class="text-center"><?php the_sub_field('skills_title'); ?></h2>
       <ul class="skillList">
-        <?php if( have_rows('skill') ):
-                while( have_rows('skill') ) : the_row();
+        <?php if( have_rows('skills') ):
+                while( have_rows('skills') ) : the_row();
            ?>
            <li data-toggle="tooltip" data-placement="bottom" title="<?php the_sub_field('skill_tool_tip'); ?>"><a href="<?php the_sub_field('skilllink'); ?>"><i class="<?php the_sub_field('skill_fa_icon'); ?>"></i></a></li>
          <?php endwhile; endif; ?>
