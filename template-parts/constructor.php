@@ -15,6 +15,10 @@
 
         get_template_part( 'template-parts/project_skills', 'none' );
 
+      elseif( get_row_layout() == 'blog_posts' ):
+
+        get_template_part( 'template-parts/blog_posts', 'none' );
+
       endif;
 
     endwhile;
