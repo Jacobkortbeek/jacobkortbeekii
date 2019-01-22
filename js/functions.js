@@ -15,13 +15,13 @@ jQuery(document).ready(function($) {
 
   $('.imgCont').hover(
     function(){
-      $(".imgCont i").addClass('animated rubberBand');
+      $(".imgCont .overlay svg").addClass('animated rubberBand');
       $(".imgCont h4").addClass('animated bounceIn');
 
     },
     function(){
       $(".imgCont i").removeClass('animated rubberBand');
-      $(".imgCont h4").removeClass('animated bounceIn');
+      $(".imgCont .overlay svg").removeClass('animated bounceIn');
     }
   );
 
