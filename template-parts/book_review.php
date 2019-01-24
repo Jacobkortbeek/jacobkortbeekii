@@ -21,25 +21,23 @@
       ?>
       <?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
         <?php if( $i < 3 ) : ?>
-          <div class="col-lg-4">
-
-            <div class="jk-card bottomBorderRandom shadow margin-bot">
-              <div class="jk-card-image">
-                <?php the_post_thumbnail(); ?>
-                <i class="far fa-hand-pointer tapBlog dNonePc"></i>
-              </div>
-              <div class="jk-card-content">
-                <h2><?php the_title(); ?></h2>
-                  <?php the_excerpt(); ?>
-              </div>
-              <div class="jk-card-reveal">
-                <h2><?php the_title(); ?></h2>
-                <?php the_content(); ?>
-                <a href="<?php the_permalink(); ?>">Read More</a>
-              </div>
-            </div>
-
+      <div class="col-md-4">
+        <div class="jk-card bottomBorderRandom shadow-lg margin-bot">
+          <div class="jk-card-image">
+            <?php the_post_thumbnail(); ?>
+            <i class="far fa-hand-pointer tapBlog dNonePc"></i>
           </div>
+          <div class="jk-card-content">
+            <h2><?php the_title(); ?></h2>
+            <?php the_excerpt(); ?>
+          </div>
+          <div class="jk-card-reveal">
+            <h2><?php the_title(); ?></h2>
+            <?php the_content(); ?>
+            <a href="<?php the_permalink(); ?>">Read More</a>
+          </div>
+        </div>
+      </div>
     <?php endif; ?>
       <?php $i++;?>
       <?php endwhile; endif; wp_reset_postdata(); ?>
