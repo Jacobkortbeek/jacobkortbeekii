@@ -5,6 +5,10 @@
     return ' ...';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+function custom_excerpt_length( $length ) {
+      return 6;
+  }
+  add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function create_posttype() {
 
@@ -66,11 +70,6 @@ function create_posttype() {
   );
 }
 add_action( 'init', 'create_posttype' );
-
-  function custom_excerpt_length( $length ) {
-        return 6;
-    }
-    add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
   function wpt_theme_styles() {
     wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=Ubuntu' );
