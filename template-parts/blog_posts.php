@@ -35,7 +35,7 @@
           <div class="jk-card-reveal">
             <h2><?php the_title(); ?></h2>
             <?php the_content(); ?>
-            <a href="#">Read More</a>
+            <a href="<?php the_sub_field('blog_button_link'); ?>">Read More</a>
           </div>
         </div>
 
