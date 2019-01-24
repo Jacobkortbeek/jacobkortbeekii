@@ -19,6 +19,10 @@
 
         get_template_part( 'template-parts/blog_posts', 'none' );
 
+      elseif( get_row_layout() == 'portfolio_posts' ):
+
+        get_template_part( 'template-parts/portfolio_posts', 'none' );
+
       endif;
 
     endwhile;
