@@ -11,7 +11,7 @@
         $num_posts = get_option( 'posts_per_page' );
 
         $args = array(
-          'post_type' => 'book reviews',
+          'post_type' => 'book_review',
           'posts_per_page' => $num_posts,
           'orderby' => 'post_date'
         );
