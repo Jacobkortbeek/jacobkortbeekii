@@ -30,13 +30,11 @@
           </div>
           <div class="jk-card-content">
             <h2><?php the_title(); ?></h2>
-            <p>
               <?php the_excerpt(); ?>
-            </p>
           </div>
           <div class="jk-card-reveal">
             <h2><?php the_title(); ?></h2>
-            <p><?php the_content(); ?>t</p>
+            <?php the_content(); ?>
             <a href="#">Read More</a>
           </div>
         </div>
