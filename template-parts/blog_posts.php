@@ -6,28 +6,49 @@
       </div>
     </div>
     <div class="row">
+      <?php
+
+        $num_posts = get_option( 'posts_per_page' );
+
+        $args = array(
+          'post_type' => 'post',
+          'posts_per_page' => $num_posts,
+          'orderby' => 'post_date'
+        );
+
+        $query = new WP_Query( $args );
+
+      ?>
+      <?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+        <?php if( $i < 4 ) : ?>
       <div class="col-lg-4">
 
         <div class="jk-card bottomBorderRandom shadow margin-bot">
           <div class="jk-card-image">
-            <img src="./assets/img/lukasz-szmigiel-33891-unsplash.jpg" alt="">
+            <img src="<?php the_post_thumbnail(); ?>" alt="">
             <i class="far fa-hand-pointer tapBlog dNonePc"></i>
           </div>
           <div class="jk-card-content">
-            <h2>Title22</h2>
+            <h2><?php the_title(); ?></h2>
             <p>
-              exerpt
+              <?php the_excerpt(); ?>
             </p>
           </div>
           <div class="jk-card-reveal">
-            <h2>title</h2>
-            <p>more experpt</p>
+            <h2><?php the_title(); ?></h2>
+            <p><?php the_content(); ?>t</p>
             <a href="#">Read More</a>
           </div>
         </div>
 
       </div>
-      <div class="col-lg-4">
+    <?php endif; ?>
+      <?php $i++;?>
+      <?php endwhile; endif; wp_reset_postdata(); ?>
+
+
+
+      <!-- <div class="col-lg-4">
 
         <div class="jk-card bottomBorderRandom shadow margin-bot">
           <div class="jk-card-image">
@@ -70,8 +91,8 @@
             <a href="#">Read More</a>
           </div>
         </div>
-        
-      </div>
+
+      </div> -->
     </div>
     <div class="row pad-top-cont">
       <div class="col-lg-12">
