@@ -27,6 +27,10 @@
 
         get_template_part( 'template-parts/design_posts', 'none' );
 
+      elseif( get_row_layout() == 'book_review' ):
+
+        get_template_part( 'template-parts/book_review', 'none' );
+
       endif;
 
     endwhile;
