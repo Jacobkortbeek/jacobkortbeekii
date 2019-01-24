@@ -16,12 +16,14 @@
                   <a href="<?php the_sub_field('contact_info_link'); ?>"><?php the_sub_field('contact_info'); ?></a>
 
               <?php elseif( get_row_layout() == 'contact_icon' ): ?>
+
                 <?php if(have_rows('contact_icons') ) : while( have_rows( 'contact_icons' ) ) : the_row(); ?>
                  <li data-toggle="tooltip" data-placement="bottom" title="<?php the_sub_field('contact_icon_fa_tool_top'); ?>"><a href="<?php the_sub_field('contact_info_fa_link'); ?>"><i class="<?php the_sub_field('contact_icon_fa'); ?>"></i></a></li>
                <?php endwhile; endif;?>
-           <?php else : ?>
-           <p>there is no contetn</p>
-         <?php endwhile; endif; ?>
+
+             <?php else : ?>
+               <p>there is no contetn</p>
+             <?php endif; endwhile; endif; ?>
          </div>
        <?php endwhile; endif;?>
       <!-- <div class="contactItem">
