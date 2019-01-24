@@ -17,7 +17,9 @@
                     <?php elseif( get_row_layout() == 'contact_icon' ): ?>
 
                       <?php if( have_rows('contact_icons') ) : while( have_rows('contact_icons') ) : the_row(); ?>
-                        <p>icon</p>
+                        <ul class="skillList">
+                          <li data-toggle="tooltip" data-placement="bottom" title="@name"><a href="#"><i class="fab fa-twitter fullCenter"></i></a></li>
+                        </ul>
                       <?php endwhile; endif; ?>
 
                     <?php endif; ?>
