@@ -11,8 +11,7 @@
         <?php if( have_rows('text_or_icon') ):
                 while( have_rows('text_or_icon') ): the_row(); ?>
 
-                <?php
-                  if( get_row_layout() == 'contact_text' ): ?>
+                <?php if( get_row_layout() == 'contact_text' ): ?>
 
                     <p>text</p>
 
@@ -20,8 +19,7 @@
 
                     <p>icon</p>
 
-                  <?php endif;
-                ?>
+                  <?php endif; ?>
 
         <?php endwhile; endif; ?>
 
