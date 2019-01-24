@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
   //remove empty p tags
-  $('p:empty').remove();
+  $('p:empty').remove().delay( 500 );
   //colours for the social icons background
   $(window).on("load", function() {
     $('.fa-twitter').parent().css("background-color", "#00aced");
