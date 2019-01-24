@@ -20,7 +20,7 @@
 
       ?>
       <?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
-        <?php if( $i < 2 ) : ?>
+        <?php if( $i < 3 ) : ?>
       <div class="col-lg-4">
 
         <div class="jk-card bottomBorderRandom shadow margin-bot">
