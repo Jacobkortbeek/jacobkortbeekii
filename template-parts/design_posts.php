@@ -42,7 +42,7 @@
     </div>
     <div class="row pad-top-cont">
       <div class="col-md-12">
-        <a href="<?php the_sub_field('design_button_link'); ?> "></a> <button type="button" class="btn btn-primary float-right"><?php the_sub_field('design_button_text'); ?></button>
+        <a href="<?php the_sub_field('design_button_link'); ?> "><button type="button" class="btn btn-primary float-right"><?php the_sub_field('design_button_text'); ?></button></a>
       </div>
     </div>
   </div>
