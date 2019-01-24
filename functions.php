@@ -11,6 +11,7 @@ function create_posttype() {
   register_post_type( 'portfolio',
   // CPT Options
       array(
+          'supports' => array( 'thumbnail' )
           'labels' => array(
               'name' => __( 'Portfolio' ),
               'singular_name' => __( 'Portfolio' ),
