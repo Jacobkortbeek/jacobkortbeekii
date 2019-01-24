@@ -31,9 +31,9 @@
 
         get_template_part( 'template-parts/book_review', 'none' );
 
-        elseif( get_row_layout() == 'contact' ):
+      elseif( get_row_layout() == 'contact' ):
 
-          get_template_part( 'template-parts/contact', 'none' );
+        get_template_part( 'template-parts/contact', 'none' );
 
       endif;
 
