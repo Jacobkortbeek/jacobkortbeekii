@@ -25,7 +25,7 @@
 
         <div class="jk-card bottomBorderRandom shadow margin-bot">
           <div class="jk-card-image">
-            <img src="<?php the_post_thumbnail(); ?>" alt="">
+            <?php the_post_thumbnail(); ?>
             <i class="far fa-hand-pointer tapBlog dNonePc"></i>
           </div>
           <div class="jk-card-content">
