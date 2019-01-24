@@ -9,6 +9,7 @@
         </div>
        <?php endwhile; endif;?>
     </div>
+  </div>
     <div class="row">
       <div class="col-md-12">
         <form class="" action="index.html" method="post">
@@ -16,5 +17,4 @@
         </form>
       </div>
     </div>
-  </div>
 </div>
