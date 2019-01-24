@@ -23,6 +23,10 @@
 
         get_template_part( 'template-parts/portfolio_posts', 'none' );
 
+      elseif( get_row_layout() == 'design_posts' ):
+
+        get_template_part( 'template-parts/design_posts', 'none' );
+
       endif;
 
     endwhile;
