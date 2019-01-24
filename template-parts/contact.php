@@ -6,24 +6,24 @@
 
         <div class="contactItem">
           <i class="<?php the_sub_field('contact_fa_icon'); ?>"></i>
+
+
+          <?php if( have_rows('text_or_icon') ): while( have_rows('text_or_icon') ): the_row(); ?>
+
+                  <?php if( get_row_layout() == 'contact_text' ): ?>
+
+                      <a href="<?php the_sub_field('contact_info_link'); ?>"><?php the_sub_field('contact_info'); ?></a>
+
+                    <?php elseif( get_row_layout() == 'contact_icon' ): ?>
+
+                      <?php if( have_rows('contact_icons') ) : while( have_rows('contact_icons') ) : the_row(); ?>
+                        <p>icon</p>
+                      <?php endwhile; endif; ?>
+
+                    <?php endif; ?>
+
+          <?php endwhile; endif; ?>
         </div>
-
-        <?php if( have_rows('text_or_icon') ): while( have_rows('text_or_icon') ): the_row(); ?>
-
-                <?php if( get_row_layout() == 'contact_text' ): ?>
-
-                    <p>text</p>
-
-                  <?php elseif( get_row_layout() == 'contact_icon' ): ?>
-
-                    <?php if( have_rows('contact_icons') ) : while( have_rows('contact_icons') ) : the_row(); ?>
-                      <p>icon</p>
-                    <?php endwhile; endif; ?>
-
-                  <?php endif; ?>
-
-        <?php endwhile; endif; ?>
-
       <?php endwhile; endif;?>
     </div>
   </div>
