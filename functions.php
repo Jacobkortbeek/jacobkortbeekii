@@ -45,6 +45,25 @@ function create_posttype() {
           'rewrite' => array('slug' => 'Designs'),
       )
   );
+
+  register_post_type( 'book_review',
+  // CPT Options
+      array(
+          'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+           ),
+          'labels' => array(
+              'name' => __( 'Book Reviews' ),
+              'singular_name' => __( 'book_review' ),
+              'menu_name'           => __( 'Book Reviews')
+          ),
+          'public' => true,
+          'has_archive' => true,
+          'rewrite' => array('slug' => 'book_review'),
+      )
+  );
 }
 add_action( 'init', 'create_posttype' );
 
