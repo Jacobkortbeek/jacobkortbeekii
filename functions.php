@@ -6,6 +6,24 @@
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
+function create_posttype() {
+
+  register_post_type( 'portfolio',
+  // CPT Options
+      array(
+          'labels' => array(
+              'name' => __( 'Portfolio' ),
+              'singular_name' => __( 'Portfolio' ),
+              'menu_name'           => __( 'Portfolio')
+          ),
+          'public' => true,
+          'has_archive' => true,
+          'rewrite' => array('slug' => 'Portfolio'),
+      )
+  );
+}
+add_action( 'init', 'create_posttype' );
+
   function custom_excerpt_length( $length ) {
         return 6;
     }
