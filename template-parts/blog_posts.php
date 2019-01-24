@@ -30,7 +30,7 @@
           </div>
           <div class="jk-card-content">
             <h2><?php the_title(); ?></h2>
-              <?php the_excerpt(); ?>
+              <?php custom_excerpt_length( 5 ); ?>
           </div>
           <div class="jk-card-reveal">
             <h2><?php the_title(); ?></h2>

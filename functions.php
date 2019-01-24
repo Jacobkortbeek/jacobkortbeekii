@@ -1,6 +1,10 @@
 <?php
   add_theme_support( 'post-thumbnails' );
-  // remove_filter( 'the_content', 'wpautop' );
+
+  function custom_excerpt_length( $length ) {
+        return $length;
+    }
+    add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
   function wpt_theme_styles() {
     wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=Ubuntu' );
