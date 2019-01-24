@@ -28,7 +28,7 @@
             <i class="far fa-hand-pointer tapBlog dNonePc"></i>
           </div>
           <div class="jk-card-content">
-            <h2><?php the_titl(); ?></h2>
+            <h2><?php the_title(); ?></h2>
             <?php the_excerpt(); ?>
           </div>
           <div class="jk-card-reveal">
