@@ -29,7 +29,7 @@
                 <?php the_post_thumbnail(); ?>
                 <i class="far fa-hand-pointer tap dNonePc"></i>
                 <div class="overlay">
-                  <h4 class="centered"><?php the_field( 'hover_text' ); ?></h4>
+                  <h4 class="centered"><?php the_field( 'designs_hover_text' ); ?></h4>
                   <a href="<?php the_permalink(); ?>"><i class="fab fa-readme"></i></a>
                 </div>
               </div>
@@ -41,24 +41,9 @@
       <?php endwhile; endif; wp_reset_postdata(); ?>
 
     </div>
-    <!-- <div class="row">
-
-      <div class="col-md-6">
-        <div class="portCont">
-          <h4 class="text-center">Title of Design</h4>
-          <div class="fullCenter imgCont shadow">
-            <img src="./assets/img/lukasz-szmigiel-33891-unsplash.jpg" alt="">
-            <div class="overlay">
-              <h4 class="centered">This is the test text</h4>
-              <a href="#"><i class="fab fa-readme"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="row pad-top-cont">
       <div class="col-md-12">
-        <button type="button" class="btn btn-primary float-right">See My Desgin Library</button>
+        <a href="<?php the_sub_field('design_button_link'); ?>"><button type="button" class="btn btn-primary float-right"><?php the_sub_field('design_button_text'); ?></button></a>
       </div>
     </div>
   </div>
