@@ -26,6 +26,25 @@ function create_posttype() {
           'rewrite' => array('slug' => 'Portfolio'),
       )
   );
+
+  register_post_type( 'designs',
+  // CPT Options
+      array(
+          'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+           ),
+          'labels' => array(
+              'name' => __( 'Designs' ),
+              'singular_name' => __( 'Designs' ),
+              'menu_name'           => __( 'Designs')
+          ),
+          'public' => true,
+          'has_archive' => true,
+          'rewrite' => array('slug' => 'Designs'),
+      )
+  );
 }
 add_action( 'init', 'create_posttype' );
 
