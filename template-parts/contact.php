@@ -8,7 +8,24 @@
           <i class="<?php the_sub_field('contact_fa_icon'); ?>"></i>
         </div>
 
-       <?php endwhile; endif;?>
+        <?php if( have_rows('text_or_icon') ):
+                while( have_rows('text_or_icon') ): the_row(); ?>
+
+                <?php
+                  if( get_row_layout() == 'contact_text' ): ?>
+
+                    <p>text</p>
+
+                  <?php elseif( get_row_layout() == 'contact_icon' ): ?>
+
+                    <p>icon</p>
+
+                  <?php endif;
+                ?>
+
+        <?php endwhile; endif; ?>
+
+      <?php endwhile; endif;?>
     </div>
   </div>
     <div class="row">
