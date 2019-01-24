@@ -1,5 +1,6 @@
 <?php
   add_theme_support( 'post-thumbnails' );
+  remove_filter( 'the_content', 'wpautop' );
 
   function wpt_theme_styles() {
     wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=Ubuntu' );

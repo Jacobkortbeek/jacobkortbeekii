@@ -1,5 +1,3 @@
-jQuery('p:empty').remove().delay( 500 );
-
 jQuery(document).ready(function($) {
   //colours for the social icons background
   $(window).on("load", function() {
