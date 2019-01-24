@@ -851,6 +851,9 @@ html, body {
       text-decoration: none;
       color: black;
       font-size: 1.8em; }
+      .skillList li a i {
+        padding: 0 !important;
+        font-size: 1em !important; }
 
 .portCont {
   margin: 1em; }
