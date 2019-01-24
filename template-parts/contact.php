@@ -15,13 +15,13 @@
                       <a href="<?php the_sub_field('contact_info_link'); ?>"><?php the_sub_field('contact_info'); ?></a>
 
                     <?php elseif( get_row_layout() == 'contact_icon' ): ?>
-
+                      <ul class="contactIcons">
                       <?php if( have_rows('contact_icons') ) : while( have_rows('contact_icons') ) : the_row(); ?>
-                        <ul class="contactIcons">
-                          <li data-toggle="tooltip" data-placement="bottom" title="@name"><a href="#"><i class="fab fa-twitter fullCenter"></i></a></li>
-                        </ul>
-                      <?php endwhile; endif; ?>
 
+                          <li data-toggle="tooltip" data-placement="bottom" title="@name"><a href="#"><i class="fab fa-twitter fullCenter"></i></a></li>
+
+                      <?php endwhile; endif; ?>
+                      </ul>
                     <?php endif; ?>
 
           <?php endwhile; endif; ?>
