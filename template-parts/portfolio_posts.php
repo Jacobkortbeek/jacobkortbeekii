@@ -43,7 +43,7 @@
 
     <div class="row pad-top-cont">
       <div class="col-lg-12">
-        <button type="button" class="btn btn-primary float-right"><?php the_sub_field('portfolio_button_link'); ?></button>
+        <a href="<?php the_sub_field('portfolio_button_link'); ?>"><button type="button" class="btn btn-primary float-right">See My Whole Portfolio</button></a>
       </div>
     </div>
   </div>
