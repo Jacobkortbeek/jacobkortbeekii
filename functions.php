@@ -6,17 +6,7 @@
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 function custom_excerpt_length( $length ) {
-  global $post;
-    if ($post->post_type == 'post')
-      return 50;
-    else if ($post->post_type == 'Portfolio')
-      return 65;
-    else if ($post->post_type == 'Designs')
-      return 75;
-    else if ($post->post_type == 'book_review')
-      return 6;
-    else
-      return 80;
+  return 6;
   }
   add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
