@@ -1,4 +1,6 @@
 <?php
+  add_theme_support( 'post-thumbnails' );
+
   function wpt_theme_styles() {
     wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=Ubuntu' );
 
