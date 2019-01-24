@@ -16,7 +16,7 @@
 
                   <?php elseif( get_row_layout() == 'contact_icon' ): ?>
 
-                    <?php if( have_rows('contact_icons') ) : while( have_rowa('contact_icons') ) : the_row(); ?>
+                    <?php if( have_rows('contact_icons') ) : while( have_rows('contact_icons') ) : the_row(); ?>
                       <p>icon</p>
                     <?php endwhile; endif; ?>
 
