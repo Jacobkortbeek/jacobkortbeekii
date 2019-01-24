@@ -31,9 +31,7 @@
   </div>
     <div class="row">
       <div class="col-md-12">
-        <form class="" action="index.html" method="post">
-          This is where the contact form7 goes
-        </form>
+        <?php the_sub_field('contact_form_link'); ?>
       </div>
     </div>
 </div>
