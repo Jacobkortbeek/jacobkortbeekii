@@ -1010,11 +1010,11 @@ html, body {
       .homeForm form p label span textarea {
         width: 100%; }
 
-.post {
+.posts .post {
   transition: all 2s ease-in-out;
   background-color: #f4f5ed; }
   @media only screen and (max-width: 737px) {
-    .post .postCont {
+    .posts .post .postCont {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -1041,7 +1041,7 @@ html, body {
       -moz-align-content: center;
       -ms-align-content: center;
       align-content: center; } }
-  .post .postCont .post-textCont {
+  .posts .post .postCont .post-textCont {
     height: 100%;
     width: auto;
     display: -webkit-box;
@@ -1070,18 +1070,18 @@ html, body {
     -moz-align-content: center;
     -ms-align-content: center;
     align-content: center; }
-  .post .postCont img {
+  .posts .post .postCont img {
     height: auto;
     width: 100%; }
-  .post .postButtonCont {
+  .posts .post .postButtonCont {
     margin-bottom: 1em; }
 
-.postTitle {
+.posts .postTitle {
   height: 20vh;
   width: 100%;
   background-color: orange; }
 
-.postFilter .dropdown .dropBtn {
+.posts .postFilter .dropdown .dropBtn {
   margin-top: 1em;
   background-color: #f4f5ed;
   color: black;
@@ -1090,14 +1090,14 @@ html, body {
   border: none;
   cursor: pointer; }
 
-.postFilter .dropdown .dropdownContent {
+.posts .postFilter .dropdown .dropdownContent {
   z-index: 999;
   position: absolute;
   display: none;
   height: 225%;
   width: 10em;
   background-color: #f4f5ed; }
-  .postFilter .dropdown .dropdownContent.showD {
+  .posts .postFilter .dropdown .dropdownContent.showD {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1124,7 +1124,7 @@ html, body {
     -moz-align-content: center;
     -ms-align-content: center;
     align-content: center; }
-  .postFilter .dropdown .dropdownContent a {
+  .posts .postFilter .dropdown .dropdownContent a {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1155,7 +1155,7 @@ html, body {
     width: 100%;
     color: black;
     text-decoration: none; }
-    .postFilter .dropdown .dropdownContent a:hover {
+    .posts .postFilter .dropdown .dropdownContent a:hover {
       background-color: #e3e1d2; }
 
 .headerAbout {
