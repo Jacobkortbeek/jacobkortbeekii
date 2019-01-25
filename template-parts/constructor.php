@@ -35,6 +35,10 @@
 
         get_template_part( 'template-parts/contact', 'none' );
 
+      elseif( get_row_layout() == 'page_header' ):
+
+        get_template_part( 'template-parts/page_header', 'none' );
+
       endif;
 
     endwhile;
