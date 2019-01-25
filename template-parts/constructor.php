@@ -39,6 +39,10 @@
 
         get_template_part( 'template-parts/page_header', 'none' );
 
+      elseif( get_row_layout() == 'double_box' ):
+
+        get_template_part( 'template-parts/double_box', 'none' );
+
       endif;
 
     endwhile;
