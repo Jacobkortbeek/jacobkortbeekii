@@ -24,7 +24,7 @@ get_header(); ?>
 	'child_of'           => 0,
 	'exclude'            => '',
 	'include'            => '',
-	'echo'               => 1,
+	'echo'               => 0,
 	'selected'           => 0,
 	'hierarchical'       => 0,
 	'name'               => 'cat',
@@ -36,7 +36,7 @@ get_header(); ?>
 	'hide_if_empty'      => false,
 	'value_field'	     => 'term_id',
 ); ?>
-<?php wp_dropdown_categories( $args ); ?> 
+<?php wp_dropdown_categories( $args ); ?>
 <!-- <div class="container postFilter">
   <div class="row">
     <div class="col-lg-12">
