@@ -34,7 +34,7 @@ get_header(); ?>
 <?php
 $query = new WP_Query(array(
   'posts_per_page' => -1,
-  'post_type' => 'custom',
+  'post_type' => 'designs',
   'post_status' => 'publish'
 ));
 
