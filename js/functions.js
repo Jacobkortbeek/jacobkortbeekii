@@ -133,5 +133,6 @@ jQuery(document).ready(function($) {
   });
 
   $('.wpcf7-submit').addClass('btn btn-primary float-right');
+  $('.wpcf7').addClass('homeForm');
 
 });
