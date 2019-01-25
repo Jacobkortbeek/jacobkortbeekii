@@ -31,11 +31,21 @@ get_header(); ?>
   </div>
 </div>
 
+<?php
+$query = new WP_Query(array(
+  'posts_per_page' => -1,
+  'post_type' => 'custom',
+  'post_status' => 'publish'
+));
+
+while($query->have_posts()) :
+?>
+
 <div class="container post curvedCorner bottomBorderRandom shadow margin-topBot">
   <div class="row postCont">
     <div class="col-lg-6">
       <div class="post-textCont">
-        <h2 class="postHeading">Title</h2>
+        <h2 class="postHeading"><?php the_title(); ?></h2>
         <p class="padAll">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
@@ -53,7 +63,7 @@ get_header(); ?>
     </div>
   </div>
 </div>
-
+<?php endwhile; ?>
 <div class="container post curvedCorner bottomBorderRandom shadow margin-topBot">
   <div class="row postCont">
     <div class="col-lg-6">
