@@ -34,9 +34,14 @@ get_header(); ?>
 <?php
 
   $num_posts = get_option( 'posts_per_page' );
-
+  $post_types = array(
+    'post',
+    'designs',
+    'portfolio',
+    'book_review'
+  );
   $args = array(
-    'post_type' => 'post',
+    'post_type' => $post_types,
     'posts_per_page' => $num_posts,
     'orderby' => 'post_date'
   );
