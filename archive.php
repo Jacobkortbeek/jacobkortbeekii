@@ -17,7 +17,7 @@ get_header(); ?>
   <div class="row">
     <div class="col-lg-12">
       <div class="dropdown">
-        <button onclick="dropDown()" class="dropBtn shadow-sm">Filter</button>
+        <button class="dropBtn shadow-sm">Filter</button>
         <div class="dropdownContent shadow" id="dropDownCont">
           <a href="#">Link</a>
           <a href="#">Link</a>

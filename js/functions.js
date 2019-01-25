@@ -101,10 +101,11 @@ jQuery(document).ready(function($) {
     console.log(bottomBorderRandLength);
   });
 
-  function dropDown() {
+  $('.dropBtn').on('click', () => {
     $('#dropDownCont').toggleClass('showD animated fadeInDown');
     console.log('D clicked');
-  }
+  });
+
 
   //animsition
   $(document).ready(function() {
