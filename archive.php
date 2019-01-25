@@ -24,7 +24,7 @@ get_header(); ?>
 	'child_of'           => 0,
 	'exclude'            => '',
 	'include'            => '',
-	'echo'               => 0,
+	'echo'               => 1,
 	'selected'           => 0,
 	'hierarchical'       => 0,
 	'name'               => 'cat',
