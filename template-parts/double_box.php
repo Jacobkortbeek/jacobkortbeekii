@@ -1,4 +1,4 @@
-<div class="container pad-top-cont">
+<div class="container">
   <div class="row margin-top padAll">
     <div class="col-lg-6">
       <div class="experience backgroundGrey curvedCorner padAll bottomBorderRandom shadow margin-bot">
