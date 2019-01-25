@@ -82,6 +82,9 @@ html, body {
 .curvedCorner {
   border-radius: 10px; }
 
+.marginLeft {
+  margin-left: 1em; }
+
 @media only screen and (min-width: 1320px) {
   .dNonePc {
     display: none !important; } }
@@ -417,6 +420,9 @@ html, body {
 
 .curvedCorner {
   border-radius: 10px; }
+
+.marginLeft {
+  margin-left: 1em; }
 
 @media only screen and (min-width: 1320px) {
   .dNonePc {

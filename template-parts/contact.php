@@ -12,7 +12,7 @@
 
                   <?php if( get_row_layout() == 'contact_text' ): ?>
 
-                      <a href="<?php the_sub_field('contact_info_link'); ?>"><?php the_sub_field('contact_info'); ?></a>
+                      <a class="marginLeft" href="<?php the_sub_field('contact_info_link'); ?>"><?php the_sub_field('contact_info'); ?></a>
 
                     <?php elseif( get_row_layout() == 'contact_icon' ): ?>
                       <ul class="contactIcons">
