@@ -63,7 +63,7 @@ while($query->have_posts()) :
     </div>
   </div>
 </div>
-<?php endwhile; ?>
+<?php endwhile; wp_reset_query();?>
 <div class="container post curvedCorner bottomBorderRandom shadow margin-topBot">
   <div class="row postCont">
     <div class="col-lg-6">
