@@ -15,6 +15,7 @@ function create_posttype() {
   register_post_type( 'portfolio',
   // CPT Options
       array(
+          'taxonomies'  => array( 'category' ),
           'supports' => array(
             'title',
             'editor',
@@ -54,6 +55,7 @@ function create_posttype() {
   register_post_type( 'book_review',
   // CPT Options
       array(
+          'taxonomies'  => array( 'category' ),
           'supports' => array(
             'title',
             'editor',
