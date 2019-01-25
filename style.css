@@ -1158,7 +1158,7 @@ html, body {
     .posts .postFilter .dropdown .dropdownContent a:hover {
       background-color: #e3e1d2; }
 
-.about .headerAbout {
+.headerAbout {
   height: 30vh;
   width: 100%;
   background-color: red; }
