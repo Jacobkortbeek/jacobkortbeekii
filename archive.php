@@ -32,15 +32,19 @@ get_header(); ?>
 </div>
 
 <?php
-$query = new WP_Query(array(
-  'posts_per_page' => -1,
-  'post_type' => 'designs',
-  'post_status' => 'publish'
-));
 
-while($query->have_posts()) :
+  $num_posts = get_option( 'posts_per_page' );
+
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => $num_posts,
+    'orderby' => 'post_date'
+  );
+
+  $query = new WP_Query( $args );
+
 ?>
-
+<?php $i=0; if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
 <div class="container post curvedCorner bottomBorderRandom shadow margin-topBot">
   <div class="row postCont">
     <div class="col-lg-6">
@@ -63,7 +67,7 @@ while($query->have_posts()) :
     </div>
   </div>
 </div>
-<?php endwhile; wp_reset_query();?>
+<?php endwhile; endif; wp_reset_postdata(); ?>
 <div class="container post curvedCorner bottomBorderRandom shadow margin-topBot">
   <div class="row postCont">
     <div class="col-lg-6">
