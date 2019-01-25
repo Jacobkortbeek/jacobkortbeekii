@@ -889,7 +889,7 @@ html, body {
   height: 9em; }
   .contactItemCont .contactItem a {
     color: black; }
-  .contactItemCont .contactItem svg {
+  .contactItemCont .contactItem i {
     font-size: 1.5em;
     padding-right: .8em; }
 
