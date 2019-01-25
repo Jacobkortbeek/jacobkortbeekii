@@ -34,6 +34,7 @@ function create_posttype() {
   register_post_type( 'designs',
   // CPT Options
       array(
+          'taxonomies'  => array( 'category' ),
           'supports' => array(
             'title',
             'editor',
