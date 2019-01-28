@@ -48,9 +48,9 @@ get_header(); ?>
 		wp_dropdown_categories(
 			array(
 				'orderby'         => 'NAME', // Order the items in the dropdown menu by their name.
-				'taxonomy'        => 'tools', // Only include posts with the taxonomy of 'tools'.
-				'name'            => 'tools', // Change this to the
-				'show_option_all' => 'All Tools', // Text the dropdown will display when none of the options have been selected.
+				'taxonomy'        => 'category', // Only include posts with the taxonomy of 'tools'.
+				'name'            => 'category', // Change this to the
+				'show_option_all' => 'Show All Posts', // Text the dropdown will display when none of the options have been selected.
 				'selected'        => km_get_selected_taxonomy_dropdown_term(), // Set which option in the dropdown menu is the currently selected one.
 			) );
 		?>
