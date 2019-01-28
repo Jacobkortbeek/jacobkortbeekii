@@ -37,6 +37,54 @@ get_header(); ?>
 	'value_field'	     => 'term_id',
 ); ?>
 <?php wp_dropdown_categories( $args ); ?>
+
+
+<div class="tools-dropdown">
+
+	<form id="tool-category-select" class="tool-category-select" method="get">
+
+		<?php
+		// Create and display the dropdown menu.
+		wp_dropdown_categories(
+			array(
+				'orderby'         => 'NAME', // Order the items in the dropdown menu by their name.
+				'taxonomy'        => 'tools', // Only include posts with the taxonomy of 'tools'.
+				'name'            => 'tools', // Change this to the
+				'show_option_all' => 'All Tools', // Text the dropdown will display when none of the options have been selected.
+				'selected'        => km_get_selected_taxonomy_dropdown_term(), // Set which option in the dropdown menu is the currently selected one.
+			) );
+		?>
+
+		<input type="submit" value="View" />
+	</form>
+
+</div>
+
+<section id="tools-listing">
+
+	<?php $tools_in_taxonomy_term = km_get_tools_in_taxonomy_term(); ?>
+
+	<!-- If posts were found, -->
+	<?php if ( $tools_in_taxonomy_term->have_posts() ) : ?>
+
+		<!-- Loop through every post. -->
+		<?php while ( $tools_in_taxonomy_term->have_posts() ) : $tools_in_taxonomy_term->the_post(); ?>
+
+			<!-- Display each post's title and content - you can change this section to display whatever post content you want. -->
+			<article class="tool-entry">
+				<h1><?php the_title(); ?></h1>
+				<p><?php the_content(); ?></p>
+			</article>
+
+		<?php endwhile; ?>
+
+		<?php wp_reset_postdata(); ?>
+
+	<?php endif; ?>
+
+</section>
+
+
 <!-- <div class="container postFilter">
   <div class="row">
     <div class="col-lg-12">

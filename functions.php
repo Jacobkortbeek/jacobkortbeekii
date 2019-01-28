@@ -1,4 +1,50 @@
 <?php
+
+
+/**
+* Get tools, filtered by the taxonomy term, if one was selected.
+*
+* @return WP_Query Tools in the taxonomy term if one was selected, else all.
+*/
+function km_get_tools_in_taxonomy_term() {
+return new WP_Query( array(
+    'post_type'      => 'tool', // Change this to the slug of your post type.
+    'posts_per_page' => 500, // Display a maximum of 500 options in the dropdown.
+    'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
+) );
+}
+/**
+* Get the taxonomy query to be used by km_get_tools_in_taxonomy_term().
+*
+* @return array The taxonomy query if a term was selected, else an empty array.
+*/
+function km_get_tools_in_taxonomy_term_tax_query() {
+$selected_term = km_get_selected_taxonomy_dropdown_term();
+// If a term has been selected, use that in the taxonomy query.
+if ( $selected_term ) {
+  return array(
+    array(
+      'taxonomy' => 'tools', // Change this to the slug of your taxonomy.
+      'field'    => 'term_id',
+      'terms'    => $selected_term,
+    ),
+  );
+}
+// Otherwise, don't filter based on a taxonomy term and just get all the results.
+return array();
+}
+/**
+* Get the selected taxonomy dropdown term slug.
+*
+* @return string The selected taxonomy dropdown term ID, else empty string.
+*/
+function km_get_selected_taxonomy_dropdown_term() {
+return isset( $_GET[ 'tools' ] ) && $_GET[ 'tools' ] ? sanitize_text_field( $_GET[ 'tools' ] ) : '';
+}
+
+
+
+
   add_theme_support( 'post-thumbnails' );
 
   function wpdocs_excerpt_more( $more ) {
