@@ -15,7 +15,7 @@ $post_types = array(
 */
 function km_get_tools_in_taxonomy_term() {
 return new WP_Query( array(
-    'post_type'      => $post_types, // Change this to the slug of your post type.
+    'taxonomy'       => 'category', // Change this to the slug of your post type.
     'posts_per_page' => 500, // Display a maximum of 500 options in the dropdown.
     'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
 ) );
