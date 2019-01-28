@@ -1,6 +1,11 @@
 <?php
 
-
+$post_types = array(
+  'post',
+  'designs',
+  'portfolio',
+  'book_review'
+);
 /**
 * Get tools, filtered by the taxonomy term, if one was selected.
 *
@@ -8,7 +13,7 @@
 */
 function km_get_tools_in_taxonomy_term() {
 return new WP_Query( array(
-    'post_type'      => 'post', // Change this to the slug of your post type.
+    'post_type'      => $post_types, // Change this to the slug of your post type.
     'posts_per_page' => 500, // Display a maximum of 500 options in the dropdown.
     'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
 ) );
