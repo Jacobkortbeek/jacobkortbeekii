@@ -8,7 +8,7 @@
 */
 function km_get_tools_in_taxonomy_term() {
 return new WP_Query( array(
-    'post_type'      => 'tool', // Change this to the slug of your post type.
+    'post_type'      => 'portfolio', // Change this to the slug of your post type.
     'posts_per_page' => 500, // Display a maximum of 500 options in the dropdown.
     'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
 ) );
@@ -24,7 +24,7 @@ $selected_term = km_get_selected_taxonomy_dropdown_term();
 if ( $selected_term ) {
   return array(
     array(
-      'taxonomy' => 'tools', // Change this to the slug of your taxonomy.
+      'taxonomy' => 'category', // Change this to the slug of your taxonomy.
       'field'    => 'term_id',
       'terms'    => $selected_term,
     ),
