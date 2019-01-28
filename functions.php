@@ -39,7 +39,7 @@ return array();
 * @return string The selected taxonomy dropdown term ID, else empty string.
 */
 function km_get_selected_taxonomy_dropdown_term() {
-return isset( $_GET[ 'tools' ] ) && $_GET[ 'tools' ] ? sanitize_text_field( $_GET[ 'tools' ] ) : '';
+return isset( $_GET[ 'category' ] ) && $_GET[ 'category' ] ? sanitize_text_field( $_GET[ 'category' ] ) : '';
 }
 
 
