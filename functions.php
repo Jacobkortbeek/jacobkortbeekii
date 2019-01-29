@@ -1,11 +1,5 @@
 <?php
 
-$post_types = array(
-  'post',
-  'designs',
-  'portfolio',
-  'book_review'
-);
 /**
 * Get tools, filtered by the taxonomy term, if one was selected.
 *
