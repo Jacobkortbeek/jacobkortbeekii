@@ -13,7 +13,7 @@ return new WP_Query( array(
       'portfolio',
       'book_review'
     ), // Change this to the slug of your post type.
-    'posts_per_page' => 500, // Display a maximum of 500 options in the dropdown.
+    'posts_per_page' => 5, // Display a maximum of 500 options in the dropdown.
     'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
 ) );
 }
