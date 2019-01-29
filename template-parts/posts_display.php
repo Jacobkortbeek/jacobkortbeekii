@@ -64,8 +64,8 @@
 			</article>
 
 		<?php endwhile; ?>
-    <?php next_posts_link(); ?>
-    <?php previous_posts_link(); ?>
+    <?php next_posts_link( 'next'); ?>
+    <?php previous_posts_link( 'previous' ); ?>
 
 
 		<?php wp_reset_postdata(); ?>
