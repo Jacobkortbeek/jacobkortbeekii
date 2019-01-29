@@ -18,7 +18,6 @@
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
       $args = array('posts_per_page' => 5, 'paged' => $paged );
       query_posts($args); ?>
-		?>
 
 		<input type="submit" value="View" />
 	</form>
@@ -67,7 +66,7 @@
 		<?php endwhile; ?>
     <?php next_posts_link(); ?>
     <?php previous_posts_link(); ?>
-    
+
 
 		<?php wp_reset_postdata(); ?>
 
