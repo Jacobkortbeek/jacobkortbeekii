@@ -14,10 +14,7 @@
 				'selected'        => km_get_selected_taxonomy_dropdown_term(), // Set which option in the dropdown menu is the currently selected one.
 			) );
 
-      // the query to set the posts per page to 5
-      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-      $args = array('posts_per_page' => 5, 'paged' => $paged );
-      query_posts($args); ?>
+    ?>
 
 		<input type="submit" value="View" />
 	</form>
@@ -64,9 +61,6 @@
 			</article>
 
 		<?php endwhile; ?>
-    <?php next_posts_link( 'next'); ?>
-    <?php previous_posts_link( 'previous' ); ?>
-
 
 		<?php wp_reset_postdata(); ?>
 
