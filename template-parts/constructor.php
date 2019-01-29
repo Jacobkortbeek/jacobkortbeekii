@@ -43,6 +43,10 @@
 
         get_template_part( 'template-parts/double_box', 'none' );
 
+      elseif( get_row_layout() == 'posts_display' ):
+
+        get_template_part( 'template-parts/posts_display', 'none' );
+
       endif;
 
     endwhile;
