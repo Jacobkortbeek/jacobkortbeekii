@@ -82,7 +82,7 @@ get_header(); ?>
 </section>
 
 
-<div class="container post curvedCorner bottomBorderRandom shadow margin-topBot">
+<!-- <div class="container post curvedCorner bottomBorderRandom shadow margin-topBot">
   <div class="row postCont">
     <div class="col-lg-6">
       <div class="post-textCont">
@@ -118,7 +118,7 @@ get_header(); ?>
     <div class="col-lg-6">
       <img class="margin-topBot shadow-sm" src="./assets/img/lukasz-szmigiel-33891-unsplash.jpg" alt="">
     </div>
-  </div>
+  </div> -->
   <div class="row postButtonCont">
     <div class="col-lg-12">
       <div class="postButton">
