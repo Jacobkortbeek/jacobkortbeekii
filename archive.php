@@ -51,9 +51,9 @@ get_header(); ?>
             <div class="col-lg-6">
               <div class="post-textCont">
                 <h2 class="postHeading"><?php the_title(); ?></h2>
-                <p class="padAll"></p>
+                <div class="padAll">
                   <?php the_content(); ?>
-                </p></p>
+                </div>
               </div>
             </div>
             <div class="col-lg-6">
