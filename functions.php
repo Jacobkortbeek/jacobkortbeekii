@@ -6,8 +6,9 @@ ini_set( 'mysql.trace_mode', 0 );
 *
 * @return WP_Query Tools in the taxonomy term if one was selected, else all.
 */
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
 function km_get_tools_in_taxonomy_term() {
+  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 return new WP_Query( array(
     'post_type'      => array(
       'post',
@@ -15,6 +16,7 @@ return new WP_Query( array(
       'portfolio',
       'book_review'
     ), // Change this to the slug of your post type.
+    'orderby' => 'post_date',
     'paged' => $paged,
     'max_num_pages' => 9999,
     'posts_per_page' => 5, // Display a maximum of 500 options in the dropdown.
