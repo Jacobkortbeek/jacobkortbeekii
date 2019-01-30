@@ -73,7 +73,11 @@
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $args = array(
   'max_num_pages' => 9999,
-  'post_type' => 'post',
+  'post_type' => => array(
+    'post',
+    'designs',
+    'portfolio',
+    'book_review'),
   'posts_per_page' => 2,
   'orderby' => 'post_date',
   'cat=1&paged=' . $paged
