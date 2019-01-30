@@ -17,7 +17,7 @@ return new WP_Query( array(
       'book_review'
     ), // Change this to the slug of your post type.
     'orderby' => 'post_date',
-    'paged' => $paged,
+    'paged' => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;,
     'max_num_pages' => 9999,
     'posts_per_page' => 5, // Display a maximum of 500 options in the dropdown.
     'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
