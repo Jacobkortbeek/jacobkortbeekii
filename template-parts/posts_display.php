@@ -64,8 +64,8 @@
     <?php
 
     // next_posts_link() usage with max_num_pages
-    next_posts_link( 'Older Entries', $tools_in_taxonomy_term->max_num_pages );
     previous_posts_link( 'Newer Entries' );
+		next_posts_link( 'Older Entries', $tools_in_taxonomy_term->max_num_pages );
     ?>
     <p>above</p>
 		<?php wp_reset_postdata(); ?>
