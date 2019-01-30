@@ -75,7 +75,7 @@ $args = array(
   'post_type' => 'post',
   'posts_per_page' => $num_posts,
   'orderby' => 'post_date',
-  'cat=1&paged=' . $paged
+  'cat=1&paged=' => $paged
 );
 // the query
 $the_query = new WP_Query( $args );
@@ -96,7 +96,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 next_posts_link( 'Older Entries', $the_query->max_num_pages );
 previous_posts_link( 'Newer Entries' );
 ?>
-
+<p>above</p>
 <?php
 // clean up after the query and pagination
 wp_reset_postdata();
