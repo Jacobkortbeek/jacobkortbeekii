@@ -61,7 +61,8 @@
 			</article>
 
 		<?php endwhile; ?>
-<?php wpex_pagination(); ?>
+    <?php wpex_pagination(); ?>
+    <p>Above</p>
 		<?php wp_reset_postdata(); ?>
 
 	<?php endif; ?>
