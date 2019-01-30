@@ -83,7 +83,7 @@ $args = array(
   'cat=1&paged=' . $paged
 );
 // the query
-$the_query = new WP_Query( 'post_type=post&paged=' . $paged );
+$the_query = new WP_Query( 'post_type=post&posts_per_page=2&paged=' . $paged );
 ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
