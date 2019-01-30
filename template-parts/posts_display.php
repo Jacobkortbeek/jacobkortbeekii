@@ -80,7 +80,7 @@ $args = array(
     'book_review'),
   'posts_per_page' => 2,
   'orderby' => 'post_date',
-  'cat=1&paged=' . $paged
+  'post_type=videos&posts_per_page=9&paged=' . $paged
 );
 // the query
 $the_query = new WP_Query( $args );
