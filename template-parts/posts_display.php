@@ -71,9 +71,14 @@
 <?php
 // set the "paged" parameter (use 'page' if the query is on a static front page)
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-
+$args = array(
+  'post_type' => 'post',
+  'posts_per_page' => $num_posts,
+  'orderby' => 'post_date',
+  'cat=1&paged=' . $paged
+);
 // the query
-$the_query = new WP_Query( 'cat=1&paged=' . $paged );
+$the_query = new WP_Query( $args );
 ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
