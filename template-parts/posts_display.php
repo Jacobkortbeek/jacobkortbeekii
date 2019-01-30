@@ -74,7 +74,7 @@
 
 </section>
 
-<?php
+<?php/*
 // set the "paged" parameter (use 'page' if the query is on a static front page)
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $args = array(
@@ -115,4 +115,4 @@ wp_reset_postdata();
 
 <?php else:  ?>
 <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>
+<?php endif; */?>
