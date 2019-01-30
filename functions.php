@@ -23,6 +23,7 @@ return new WP_Query( array(
     'paged' => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
 ) );
 echo $paged;
+echo "hello world";
 }
 /**
 * Get the taxonomy query to be used by km_get_tools_in_taxonomy_term().
