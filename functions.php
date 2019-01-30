@@ -1,6 +1,6 @@
 <?php
 
-
+ini_set( 'mysql.trace_mode', 0 );
 /**
 * Get tools, filtered by the taxonomy term, if one was selected.
 *
