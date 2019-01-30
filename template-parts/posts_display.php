@@ -80,10 +80,10 @@ $args = array(
     'book_review'),
   'posts_per_page' => 2,
   'orderby' => 'post_date',
-  'posts_per_page=9&paged=' . $paged
+  'cat=1&paged=' . $paged
 );
 // the query
-$the_query = new WP_Query( $args );
+$the_query = new WP_Query( 'cat=1&paged=' . $paged );
 ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
