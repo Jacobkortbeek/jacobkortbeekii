@@ -22,6 +22,7 @@ return new WP_Query( array(
     'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
     'paged' => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
 ) );
+echo $paged;
 }
 /**
 * Get the taxonomy query to be used by km_get_tools_in_taxonomy_term().
