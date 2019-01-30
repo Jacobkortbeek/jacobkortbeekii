@@ -69,11 +69,6 @@
 </section>
 
 <?php
-$postTypes = array(
-  'post',
-  'designs',
-  'portfolio',
-  'book_review');
 // set the "paged" parameter (use 'page' if the query is on a static front page)
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $args = array(
@@ -84,11 +79,10 @@ $args = array(
     'portfolio',
     'book_review'),
   'posts_per_page' => 2,
-  'orderby' => 'post_date',
-  'cat=1&paged=' . $paged
+  'orderby' => 'post_date'
 );
 // the query
-$the_query = new WP_Query( 'post_type=' . $postTypes . '&posts_per_page=2&paged=' . $paged );
+$the_query = new WP_Query(  $args . '&paged=' . $paged );
 ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
