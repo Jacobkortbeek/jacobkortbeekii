@@ -6,9 +6,9 @@ ini_set( 'mysql.trace_mode', 0 );
 *
 * @return WP_Query Tools in the taxonomy term if one was selected, else all.
 */
-
+$GLOBALS['paged'] = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 function km_get_tools_in_taxonomy_term() {
-  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+  // $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 return new WP_Query( array(
     'max_num_pages' => 9999,
     'post_type'      => array(
@@ -20,10 +20,8 @@ return new WP_Query( array(
     'posts_per_page' => 1, // Display a maximum of 500 options in the dropdown.
     'orderby' => 'post_date',
     'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
-    'paged' => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
+    'paged' => $GLOBALS['paged'],
 ) );
-echo $paged;
-echo "hello world";
 }
 /**
 * Get the taxonomy query to be used by km_get_tools_in_taxonomy_term().
