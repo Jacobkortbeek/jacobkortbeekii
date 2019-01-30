@@ -10,17 +10,17 @@ ini_set( 'mysql.trace_mode', 0 );
 function km_get_tools_in_taxonomy_term() {
   $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 return new WP_Query( array(
+    'max_num_pages' => 9999,
     'post_type'      => array(
       'post',
       'designs',
       'portfolio',
       'book_review'
     ), // Change this to the slug of your post type.
-    'orderby' => 'post_date',
-    'paged' => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
-    'max_num_pages' => 9999,
     'posts_per_page' => 5, // Display a maximum of 500 options in the dropdown.
+    'orderby' => 'post_date',
     'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
+    'paged' => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1,
 ) );
 }
 /**
