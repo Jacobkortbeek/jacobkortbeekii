@@ -92,7 +92,7 @@ $the_query = new WP_Query( $args );
 // the loop
 while ( $the_query->have_posts() ) : $the_query->the_post();
 ?>
-<?php the_title(); ?>
+<p><?php the_title(); ?></p>
 <?php endwhile; ?>
 
 <?php
