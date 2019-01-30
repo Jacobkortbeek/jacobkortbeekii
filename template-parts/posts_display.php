@@ -72,13 +72,13 @@
 // set the "paged" parameter (use 'page' if the query is on a static front page)
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $args = array(
+  'max_num_pages' => 9999,
   'post_type' => 'post',
   'posts_per_page' => $num_posts,
-  'orderby' => 'post_date',
-  'cat=1&paged=' => $paged
+  'orderby' => 'post_date'
 );
 // the query
-$the_query = new WP_Query( $args );
+$the_query = new WP_Query( 'cat=1&paged=' . $paged, $args );
 ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
