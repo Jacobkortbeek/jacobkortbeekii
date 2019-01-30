@@ -61,10 +61,42 @@
 			</article>
 
 		<?php endwhile; ?>
-    <?php wpex_pagination(); ?>
-    <p>Above</p>
+
 		<?php wp_reset_postdata(); ?>
 
 	<?php endif; ?>
 
 </section>
+
+<?php
+// set the "paged" parameter (use 'page' if the query is on a static front page)
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+// the query
+$the_query = new WP_Query( 'cat=1&paged=' . $paged );
+?>
+
+<?php if ( $the_query->have_posts() ) : ?>
+
+<?php
+// the loop
+while ( $the_query->have_posts() ) : $the_query->the_post();
+?>
+<?php the_title(); ?>
+<?php endwhile; ?>
+
+<?php
+
+// next_posts_link() usage with max_num_pages
+next_posts_link( 'Older Entries', $the_query->max_num_pages );
+previous_posts_link( 'Newer Entries' );
+?>
+
+<?php
+// clean up after the query and pagination
+wp_reset_postdata();
+?>
+
+<?php else:  ?>
+<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
