@@ -1,5 +1,8 @@
 <?php
     header("Content-type: text/css; charset: UTF-8");
+
+    $fontColor = the_field( 'font_color', optoins );
+
 ?>
 /*
 Theme Name: Jacob Kortbeek
@@ -16,7 +19,8 @@ Tags: bootstrap, animations, interactive.
 */
 
 html, body {
-  font-family: 'Ubuntu', sans-serif !important; }
+  font-family: 'Ubuntu', sans-serif !important;
+  color: <?php echo $fontColor; ?>!important; }
 
 .jumbotron {
   background-repeat: no-repeat;
