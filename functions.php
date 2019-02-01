@@ -4,13 +4,25 @@ ini_set( 'mysql.trace_mode', 0 );
 
 // Numbered Pagination
 function wplift_pagination() {
-	global $wp_query;
+  return new WP_Query( array(
+      'max_num_pages' => 9999,
+      'post_type'      => array(
+        'post',
+        'designs',
+        'portfolio',
+        'book_review'
+      ), // Change this to the slug of your post type.
+      'posts_per_page' => 5, // Display a maximum of 500 options in the dropdown.
+      'orderby' => 'post_date',
+      'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
+      'paged' => $GLOBALS['paged'],
+  ) );
 		$big = 999999999; // need an unlikely integer
 			echo paginate_links( array(
 			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 			'format' => '?paged=%#%',
 			'current' => max( 1, get_query_var('paged') ),
-			'total' => 99
+			'total' => $wp_query->max_num_pages
 		) );
 }
 
