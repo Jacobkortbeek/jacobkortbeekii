@@ -1152,11 +1152,11 @@ html, body {
   color: white;
   font-size: 2em;
   text-decoration: none; }
-  
+
   /* Pagination */
   .page_nav .page-numbers{
-          background:#BCBCBC;
-  	color:#fff;
+          background:#e3e1d2;
+  	color:#000;
   	display:block;
   	width:auto;
   	float:left;
@@ -1166,13 +1166,13 @@ html, body {
   }
 
   .page_nav .page-numbers:hover{
-  	background: #24221D;
+  	background: #f4f5ed;
   	color:#fff;
   	text-decoration: none;
   }
 
   .page_nav .current{
-          background: #24221D;
+          background: #f4f5ed;
   	color:#fff;
           padding:15px 18px 14px 18px;
   }
