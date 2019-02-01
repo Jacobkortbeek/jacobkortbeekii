@@ -7,8 +7,8 @@
   <?php wp_head(); ?>
   <style media="screen">
     <?php
-    $fontColor = the_field( 'font_color', options );
-    $btnColor = the_field( 'button_colour', options);
+    $fontColor = the_field( 'font_color', 'option' );
+    $btnColor = the_field( 'button_colour', 'option' );
     ?>
     body{
       color: <?php echo $fontColor; ?>
