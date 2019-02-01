@@ -17,12 +17,6 @@
       </div>
       <div class="jk-nav-cont">
         <i class="fas fa-times"></i>
-        <ul>
-          <li class="active"> <a class="animsition-link">home</a> </li>
-          <li> <a href="./posts.html" class="animsition-link">posts</a> </li>
-          <li> <a href="./about.html" class="animsition-link">about</a> </li>
-          <li> <a href="#">link</a> </li>
-        </ul>
         <?php
 
                     $defaults = array(
