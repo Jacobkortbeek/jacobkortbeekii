@@ -3,12 +3,13 @@
 
 
 <div class="container-fluid headerAbout fullCenter" style="color: <?php the_sub_field( 'heading_text_color' ); ?>;
+<?php echo the_sub_field( 'page_header_image' ); ?>
 <?php
   $pageHeader = get_sub_filed( 'page_header_image' );
   if($pageHeader == 'image') :
  ?>
     background-image: linear-gradient( <?php the_sub_field( 'page_hader_rgb_color_value' ); ?>, <?php the_sub_field( 'page_hader_rgb_color_value' ); ?>), url('<?php the_sub_field('header_page_image'); ?>'); ">
-  
+
 <?php endif; ?>
   <div class="row">
     <div class="col-lg-12">
