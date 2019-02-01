@@ -105,7 +105,7 @@ return new WP_Query( array(
     'orderby' => 'post_date',
     'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
     'paged' => $GLOBALS['paged'],
-) )
+) );
 }
 /**
 * Get the taxonomy query to be used by km_get_tools_in_taxonomy_term().
