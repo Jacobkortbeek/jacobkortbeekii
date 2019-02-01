@@ -7,20 +7,8 @@ function wpbeginner_numeric_posts_nav() {
     if( is_singular() )
         return;
 
-    $wp_query = new WP_Query( array(
-        'max_num_pages' => 9999,
-        'post_type'      => array(
-          'post',
-          'designs',
-          'portfolio',
-          'book_review'
-        ), // Change this to the slug of your post type.
-        'posts_per_page' => 5, // Display a maximum of 500 options in the dropdown.
-        'orderby' => 'post_date',
-        'tax_query'      => km_get_tools_in_taxonomy_term_tax_query(),
-        'paged' => $GLOBALS['paged'],
-    ) );
-
+    global $wp_query;
+    echo $wp_query;
     /** Stop execution if there's only 1 page */
     if( $wp_query->max_num_pages <= 1 )
         return;
