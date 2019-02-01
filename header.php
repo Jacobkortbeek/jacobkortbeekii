@@ -10,7 +10,7 @@
     body{
       color: <?php echo $fontColor; ?>
     }
-    .btn-Primary{
+    .btn-primary{
       background-color: purple;
     }
   </style>
