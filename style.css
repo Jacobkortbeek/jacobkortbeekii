@@ -1,7 +1,7 @@
 <?php
     header("Content-type: text/css; charset: UTF-8");
 
-    $fontColor = the_field( 'font_color', optoins );
+    $fontColor = 'red';
 
 ?>
 /*
