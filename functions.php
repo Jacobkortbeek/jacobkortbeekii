@@ -56,6 +56,7 @@ return isset( $_GET[ 'category' ] ) && $_GET[ 'category' ] ? sanitize_text_field
 
 
   add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'menus' );
 
   function wpdocs_excerpt_more( $more ) {
     return ' ...';
