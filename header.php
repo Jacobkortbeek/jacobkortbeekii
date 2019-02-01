@@ -9,13 +9,19 @@
     <?php
     $fontColor = get_field( 'font_color', 'options' );
     $btnColor = get_field( 'button_colour', 'options' );
+    $btnHvrColor = get_field( 'button_hover_colour', 'options' );
     ?>
     body{
       color: <?php echo $fontColor; ?>
     }
     .btn-primary{
+      color: limegreen;
       background-color: <?php echo  $btnColor; ?>;
       border-color: <?php echo  $btnColor; ?>;
+    }
+    .btn-primary:not(:disabled):not(.disabled):active{
+      background-color: <?php echo $btnHvrColor ?>;
+      border-color: <?php echo $btnHvrColor ?>;
     }
   </style>
   <title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
