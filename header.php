@@ -14,12 +14,12 @@
     body{
       color: <?php echo $fontColor; ?>
     }
-    .jk-card-reveal a{
+    .jk-card .jk-card-reveal a{
       color: limegreen;
       background-color: <?php echo  $btnColor; ?>;
       border-color: <?php echo  $btnColor; ?>;
     }
-    .jk-card-reveal a:hover{
+    .jk-card .jk-card-reveal a:hover{
       background-color: <?php echo $btnHvrColor ?>;
       border-color: <?php echo $btnHvrColor ?>;
     }
