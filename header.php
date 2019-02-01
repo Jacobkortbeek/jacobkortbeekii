@@ -15,7 +15,7 @@
     }
     .btn-primary{
       background-color: <?php echo  $btnColor; ?>;
-      border-color: purple;
+      border-color: <?php echo  $btnColor; ?>;
     }
   </style>
   <title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
