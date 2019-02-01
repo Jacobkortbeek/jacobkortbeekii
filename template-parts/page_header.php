@@ -2,7 +2,7 @@
 
 
 
-<div class="container-fluid headerAbout fullCenter" style="color: <?php the_sub_field( 'heading_text_color' ); ?>;
+<div class="container-fluid headerAbout fullCenter" style="color: <?php the_sub_field( 'heading_text_color' ); ?>;">
 <?php echo the_sub_field( 'page_header_image' ); ?>
 <?php
   $pageHeader = get_sub_filed( 'page_header_image' );
