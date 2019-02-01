@@ -10,12 +10,13 @@
     $fontColor = get_field( 'font_color', 'options' );
     $btnColor = get_field( 'button_colour', 'options' );
     $btnHvrColor = get_field( 'button_hover_colour', 'options' );
+    $btnTextColor = get_field( 'button_text_color', 'options' );
     ?>
     body{
       color: <?php echo $fontColor; ?>
     }
     .jk-card .jk-card-reveal a{
-      color: limegreen;
+      color: <?php echo $btnTextColor ?>;
       background-color: <?php echo  $btnColor; ?>;
       border-color: <?php echo  $btnColor; ?>;
     }
@@ -24,7 +25,7 @@
       border-color: <?php echo $btnHvrColor ?>;
     }
     .btn-primary{
-      color: limegreen;
+      color: <?php echo $btnTextColor ?>;
       background-color: <?php echo  $btnColor; ?>;
       border-color: <?php echo  $btnColor; ?>;
     }
