@@ -69,6 +69,8 @@
     ?>
     <p>bellow</p>
 		<?php wpbeginner_numeric_posts_nav(); ?>
+		<p>new bellow</p>
+		<?php wplift_pagination(); ?>
 		<?php wp_reset_postdata(); ?>
 
 	<?php endif; ?>
