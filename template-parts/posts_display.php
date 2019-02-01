@@ -67,7 +67,8 @@
     previous_posts_link( 'Newer Entries' );
 		next_posts_link( 'Older Entries', $tools_in_taxonomy_term->max_num_pages );
     ?>
-    <p>above</p>
+    <p>bellow</p>
+		<?php wpbeginner_numeric_posts_nav(); ?>
 		<?php wp_reset_postdata(); ?>
 
 	<?php endif; ?>
