@@ -9,6 +9,12 @@
 </head>
 
 <body>
+  <style media="screen">
+    <?php $fontColor = 'red'; ?>
+    body{
+      color: <?php echo $fontColor; ?>
+    }
+  </style>
   <div class="animsition">
   <header>
     <nav>
