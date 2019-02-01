@@ -5,11 +5,11 @@
 <div class="container-fluid headerAbout fullCenter" style="color: <?php the_sub_field( 'heading_text_color' ); ?>;
 <?php
   $pageHeader = get_sub_filed( 'page_header_image' );
-  if($pageHeader == "image") :
+  if($pageHeader == "Image") :
  ?>
     background-image: linear-gradient( <?php the_sub_field( 'page_hader_rgb_color_value' ); ?>, <?php the_sub_field( 'page_hader_rgb_color_value' ); ?>), url('<?php the_sub_field('header_page_image'); ?>'); ">
   <?php
-    elseif($pageHeader == "color") :
+    elseif($pageHeader == "Color") :
   ?>
   background-color: <?php the_sub_field( 'page_header_background_color' ); ?>;">
 <?php endif; ?>
