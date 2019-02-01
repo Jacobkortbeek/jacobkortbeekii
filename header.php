@@ -5,16 +5,17 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <?php wp_head(); ?>
-  <title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
-</head>
-
-<body>
   <style media="screen">
     <?php $fontColor = 'red'; ?>
     body{
       color: <?php echo $fontColor; ?>
     }
   </style>
+  <title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
+</head>
+
+<body>
+
   <div class="animsition">
   <header>
     <nav>
