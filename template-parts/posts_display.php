@@ -64,15 +64,10 @@
     <?php
 
     // next_posts_link() usage with max_num_pages
-    previous_posts_link( 'Newer Entries' );
-		next_posts_link( 'Older Entries', $tools_in_taxonomy_term->max_num_pages );
+    // previous_posts_link( 'Newer Entries' );
+		// next_posts_link( 'Older Entries', $tools_in_taxonomy_term->max_num_pages );
     ?>
-    <p>bellow</p>
-		<?php //wpbeginner_numeric_posts_nav(); ?>
-		<p>new bellow</p>
 		<?php wplift_pagination(); ?>
-
-
 		<?php wp_reset_postdata(); ?>
 
 	<?php endif; ?>
