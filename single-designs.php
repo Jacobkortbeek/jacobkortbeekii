@@ -13,7 +13,9 @@
     <div class="row">
       <div class="col-lg-12">
         <?php the_post_thumbnail(); ?>
-        <a href="#" class="round fullCenter"><i class="fas fa-link"></i></a>
+        <?php if( get_field( 'design_link' ) ) : ?>
+        <a href="<?php the_field( 'design_link' ); ?>" class="round fullCenter"><i class="fas fa-link"></i></a>
+      <?php endif; ?>
       </div>
     </div>
   </div>
