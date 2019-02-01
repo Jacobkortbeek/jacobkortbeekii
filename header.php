@@ -19,7 +19,7 @@
       background-color: <?php echo  $btnColor; ?>;
       border-color: <?php echo  $btnColor; ?>;
     }
-    .btn-primary:not(:disabled):not(.disabled):active{
+    .btn-primary:hover{
       background-color: <?php echo $btnHvrColor ?>;
       border-color: <?php echo $btnHvrColor ?>;
     }
