@@ -10,6 +10,9 @@
     body{
       color: <?php echo $fontColor; ?>
     }
+    .btn-Primary{
+      background-color: purple;
+    }
   </style>
   <title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
 </head>
