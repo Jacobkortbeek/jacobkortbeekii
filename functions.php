@@ -53,7 +53,7 @@ return array();
 function km_get_selected_taxonomy_dropdown_term() {
 return isset( $_GET[ 'category' ] ) && $_GET[ 'category' ] ? sanitize_text_field( $_GET[ 'category' ] ) : '';
 }
-$tools_in_taxonomy_term = km_get_tools_in_taxonomy_term();
+
 
 // Numbered Pagination
 function wplift_pagination() {
@@ -66,7 +66,7 @@ function wplift_pagination() {
 			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 			'format' => '?paged=%#%',
 			'current' => max( 1, get_query_var('paged') ),
-			'total' => $tools_in_taxonomy_term->max_num_pages
+			'total' => km_get_tools_in_taxonomy_term()->max_num_pages
 		) );
 }
 
