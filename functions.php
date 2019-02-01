@@ -141,6 +141,19 @@ function create_posttype() {
 }
 add_action( 'init', 'create_posttype' );
 
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+    'page_title' 	=> 'Theme General Settings',
+    'menu_title'	=> 'Theme Settings',
+    'menu_slug' 	=> 'theme-general-settings',
+    'capability'	=> 'edit_posts',
+    'redirect'		=> false
+  ));
+
+}
+
+
   function wpt_theme_styles() {
     wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=Ubuntu' );
 
