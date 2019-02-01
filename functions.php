@@ -7,7 +7,9 @@ function wpbeginner_numeric_posts_nav() {
     if( is_singular() )
         return;
 
-    global $wp_query = new WP_Query( array(
+    global $wp_query;
+
+    $numPagination = new WP_Query( array(
         'max_num_pages' => 9999,
         'post_type'      => array(
           'post',
@@ -22,11 +24,11 @@ function wpbeginner_numeric_posts_nav() {
     ) );
 
     /** Stop execution if there's only 1 page */
-    if( $wp_query->max_num_pages <= 1 )
+    if( $numPagination->max_num_pages <= 1 )
         return;
 
     $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-    $max   = intval( $wp_query->max_num_pages );
+    $max   = intval( $numPagination->max_num_pages );
 
     /** Add current page to the array */
     if ( $paged >= 1 )
