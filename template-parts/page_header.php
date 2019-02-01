@@ -11,7 +11,7 @@
   <?php
     elseif($pageHeader['color']) :
   ?>
-  background-color: <?php the_sub_field( 'page_header_background_color' ); ?>;
+  background-color: <?php the_sub_field( 'page_header_background_color' ); ?>
 <?php endif; ?>
   <div class="row">
     <div class="col-lg-12">
