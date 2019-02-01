@@ -58,6 +58,16 @@ return isset( $_GET[ 'category' ] ) && $_GET[ 'category' ] ? sanitize_text_field
   add_theme_support( 'post-thumbnails' );
   add_theme_support( 'menus' );
 
+  function register_theme_menus() {
+    register_nav_menus(
+      array(
+        'primary-menu' => __( 'Primary Menu' ),
+        'secondary-menu' => __( 'Secondary Menu' )
+      )
+    );
+  }
+  add_action( 'init', 'register_theme_menus' );
+
   function wpdocs_excerpt_more( $more ) {
     return ' ...';
 }
