@@ -6,12 +6,16 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <?php wp_head(); ?>
   <style media="screen">
-    <?php $fontColor = 'red'; ?>
+    <?php
+    $fontColor = the_field( 'font_color', options );
+    $btnColor = the_field( 'button_colour', options);
+    ?>
     body{
       color: <?php echo $fontColor; ?>
     }
     .btn-primary{
-      background-color: purple;
+      background-color: <?php echo  $btnColor; ?>;
+      border-color: purple;
     }
   </style>
   <title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
