@@ -4,14 +4,16 @@ ini_set( 'mysql.trace_mode', 0 );
 
 // Numbered Pagination
 function wplift_pagination() {
-  echo $wp_query;
-	global $wp_query;
+	// global $wp_query;
+    $published_posts = wp_count_posts()->publish;
+    $posts_per_page = get_option('posts_per_page');
+    $page_number_max = ceil($published_posts / $posts_per_page);
 		$big = 999999999; // need an unlikely integer
 			echo paginate_links( array(
 			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 			'format' => '?paged=%#%',
 			'current' => max( 1, get_query_var('paged') ),
-			'total' => $wp_query->max_num_pages,
+			'total' => $page_number_max,
 		) );
 }
 
