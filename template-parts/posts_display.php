@@ -67,8 +67,14 @@
     // previous_posts_link( 'Newer Entries' );
 		// next_posts_link( 'Older Entries', $tools_in_taxonomy_term->max_num_pages );
     ?>
-		<div class="page_nav centered">
-			<?php wplift_pagination(); ?>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="page_nav centered">
+						<?php wplift_pagination(); ?>
+					</div>
+				</div>
+			</div>
 		</div>
 		<?php wp_reset_postdata(); ?>
 
