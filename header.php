@@ -23,6 +23,17 @@
           <li> <a href="./about.html" class="animsition-link">about</a> </li>
           <li> <a href="#">link</a> </li>
         </ul>
+        <?php
+
+                    $defaults = array(
+                      'container' => 'ul',
+                      'theme_location' => 'primary-menu',
+                      'menu_class' => 'navbar-nav'
+                    );
+
+                    wp_nav_menu( $defaults );
+
+                  ?>
       </div>
     </nav>
   </header>
