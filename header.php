@@ -15,6 +15,7 @@
       color: <?php echo $fontColor; ?>
     }
     .jk-card-reveal a{
+      color: limegreen;
       background-color: <?php echo  $btnColor; ?>;
       border-color: <?php echo  $btnColor; ?>;
     }
