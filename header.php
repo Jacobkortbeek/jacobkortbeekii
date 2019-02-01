@@ -13,25 +13,25 @@
     $btnTextColor = get_field( 'button_text_color', 'options' );
     ?>
     body{
-      color: <?php echo $fontColor; ?>
+      color: <?php echo $fontColor; ?>!important;
     }
     .jk-card .jk-card-reveal a{
-      color: <?php echo $btnTextColor ?>;
-      background-color: <?php echo  $btnColor; ?>;
-      border-color: <?php echo  $btnColor; ?>;
+      color: <?php echo $btnTextColor ?>!important;
+      background-color: <?php echo  $btnColor; ?>!important;
+      border-color: <?php echo  $btnColor; ?>!important;
     }
     .jk-card .jk-card-reveal a:hover{
-      background-color: <?php echo $btnHvrColor ?>;
-      border-color: <?php echo $btnHvrColor ?>;
+      background-color: <?php echo $btnHvrColor ?>!important;
+      border-color: <?php echo $btnHvrColor ?>!important;
     }
     .btn-primary{
-      color: <?php echo $btnTextColor ?>;
-      background-color: <?php echo  $btnColor; ?>;
-      border-color: <?php echo  $btnColor; ?>;
+      color: <?php echo $btnTextColor ?>!important;
+      background-color: <?php echo  $btnColor; ?>!important;
+      border-color: <?php echo  $btnColor; ?>!important;
     }
     .btn-primary:hover{
-      background-color: <?php echo $btnHvrColor ?>;
-      border-color: <?php echo $btnHvrColor ?>;
+      background-color: <?php echo $btnHvrColor ?>!important;
+      border-color: <?php echo $btnHvrColor ?>!important;
     }
   </style>
   <title><?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?></title>
