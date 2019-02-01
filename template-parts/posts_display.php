@@ -67,7 +67,9 @@
     // previous_posts_link( 'Newer Entries' );
 		// next_posts_link( 'Older Entries', $tools_in_taxonomy_term->max_num_pages );
     ?>
-		<?php wplift_pagination(); ?>
+		<div class="page_nav">
+			<?php wplift_pagination(); ?>
+		</div>
 		<?php wp_reset_postdata(); ?>
 
 	<?php endif; ?>
