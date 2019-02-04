@@ -38,7 +38,7 @@
             <div class="col-lg-6">
               <div class="post-textCont">
                 <h2 class="postHeading"><?php the_title(); ?></h2>
-                <div class="padAll">
+                <div class="pad-topBot">
                   <?php the_excerpt(); ?>
                 </div>
               </div>

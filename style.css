@@ -63,6 +63,11 @@ html, body {
 .padAll {
   padding: 2em; }
 
+.pad-topBot{
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
 .test-red {
   background-color: red; }
 
