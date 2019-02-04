@@ -68,7 +68,7 @@
 		// next_posts_link( 'Older Entries', $tools_in_taxonomy_term->max_num_pages );
     ?>
 		<div class="container">
-			<div class="row padAll">
+			<div class="row padAll margin-top">
 				<div class="col-lg-12">
 					<div class="page_nav centered">
 						<?php wplift_pagination(); ?>
