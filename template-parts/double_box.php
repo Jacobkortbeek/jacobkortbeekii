@@ -6,8 +6,8 @@
         <ul class="skillList">
           <?php if( have_rows('box_one_icons') ) : while( have_rows('box_one_icons') ) : the_row(); ?>
             <?php $iconText = get_sub_field('icon_or_text'); ?>
-          <li data-toggle="tooltip" data-placement="bottom" title="<?php the_sub_field('box_one_fa_icon_tool_tip'); ?>"><a href="<?php the_sub_field('box_one_fa_icon_link'); ?>"><i class="<?php if( $iconText == 'icon' ): the_sub_field('box_one_fa_icon'); ?>">
-          <?php elseif( $iconText == 'text' ): the_sub_field('text'); endif;?></i></a></li>
+          <li data-toggle="tooltip" data-placement="bottom" title="<?php the_sub_field('box_one_fa_icon_tool_tip'); ?>"><a href="<?php the_sub_field('box_one_fa_icon_link'); ?>"><i class="<?php if( $iconText == 'icon' ): the_sub_field('box_one_fa_icon'); endif; ?>">
+          <?php if( $iconText == 'text' ): the_sub_field('text'); endif;?></i></a></li>
         <?php endwhile; endif; ?>
         </ul>
       </div>
