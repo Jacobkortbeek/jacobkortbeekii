@@ -5,7 +5,9 @@
         <h2 class="text-center"><?php the_sub_field('box_one_title'); ?></h2>
         <ul class="skillList">
           <?php if( have_rows('box_one_icons') ) : while( have_rows('box_one_icons') ) : the_row(); ?>
-          <li data-toggle="tooltip" data-placement="bottom" title="<?php the_sub_field('box_one_fa_icon_tool_tip'); ?>"><a href="<?php the_sub_field('box_one_fa_icon_link'); ?>"><i class="<?php the_sub_field('box_one_fa_icon'); ?>"></i></a></li>
+            <?php $iconText = get_sub_field('icon_or_text'); ?>
+          <li data-toggle="tooltip" data-placement="bottom" title="<?php the_sub_field('box_one_fa_icon_tool_tip'); ?>"><a href="<?php the_sub_field('box_one_fa_icon_link'); ?>"><i class="<?php if( $iconText == 'icon' ): the_sub_field('box_one_fa_icon'); ?>">
+          <?php elseif( $iconText == 'text' ): the_sub_field('text'); endif;?></i></a></li>
         <?php endwhile; endif; ?>
         </ul>
       </div>
