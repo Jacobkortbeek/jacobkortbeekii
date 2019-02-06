@@ -20,7 +20,7 @@
           <?php $iconText = get_sub_field('icon_or_text'); ?>
           <li data-toggle="tooltip" data-placement="bottom" title="<?php the_sub_field('box_two_fa_icon_tool_tip'); ?>"><a href="<?php the_sub_field('box_two_fa_icon_link'); ?>"><i class="<?php if( $iconText == 'icon' ): the_sub_field('box_two_fa_icon'); endif; ?>">
             <?php if( $iconText == 'text' ): the_sub_field('text'); endif; ?>
-            <?php echo $iconText; ?> hello</i></a></li>
+            </i></a></li>
         <?php endwhile; endif; ?>
         </ul>
       </div>
